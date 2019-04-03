@@ -1,0 +1,15 @@
+<!--edit page '/recipes/:id/edit'
+    responds with a 200 status code (FAILED - 10)
+    contains a form to edit the recipe (FAILED - 11)
+    displays the recipe's ingredients before editing (FAILED - 12)
+    submits via a patch request (FAILED - 13)-->
+<form action="/recipes/<%=@recipe.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <label>Recipe name</label>
+  <input type="text" name="name" placeholder="<%=@recipe.name%>">
+  <label>Recipe ingredients</label>
+  <input type="text" name="ingredients" placeholder="<%=@recipe.ingredients%>">
+  <label>Cooking time</label>
+  <input type="text" name="cook_time" placeholder="<%=@recipe.cook_time%>">
+  <button type="submit">Submit</button>
+</form>

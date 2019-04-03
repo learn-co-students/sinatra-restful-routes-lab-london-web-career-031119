@@ -1,0 +1,14 @@
+<!--show page '/recipes/:id'
+    responds with a 200 status code (FAILED - 4)
+    displays the recipe's name (FAILED - 5)
+    displays the recipe's ingredients (FAILED - 6)
+    displays the recipe's cook time (FAILED - 7)
+    contains a form to delete the recipe (FAILED - 8)
+    deletes via a DELETE request (FAILED - 9)-->
+<h1><%=@recipe.name%></h1>
+<h4><%=@recipe.ingredients%></h4>
+<h4><%=@recipe.cook_time%></h4>
+<form action="/recipes/<%=@recipe.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <button type="submit" name="delete" id="delete">Delete</button>
+</form>
