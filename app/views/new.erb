@@ -1,0 +1,13 @@
+<!--new page '/recipes/new'
+    responds with a 200 status code (FAILED - 14)
+    contains a form to create the recipe (FAILED - 15)
+    posts the form back to create a new recipe (FAILED - 16)-->
+<form method="POST" action="/recipes">
+  <label>Recipe name</label>
+  <input type="text" name="name">
+  <label>Recipe ingredients</label>
+  <input type="text" name="ingredients">
+  <label>Cooking time</label>
+  <input type="text" name="cook_time">
+  <button type="submit">Submit</button>
+</form>
